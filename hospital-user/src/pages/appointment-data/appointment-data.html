@@ -1,0 +1,51 @@
+<!--
+  Generated template for the AppointmentDataPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Data Janji</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-item *ngFor="let items of listDataUser">
+    <ion-label>Pilih Kategori Status </ion-label>
+    <ion-select [(ngModel)]="kategoriStatus" (ionChange)="loadApoitment(items.id)">
+      <ion-option value="1">Diajukan</ion-option>
+      <ion-option value="2">Disetujui</ion-option>
+      <ion-option value="3">Dicancel</ion-option>
+      <ion-option value="4">Dilaksanakan</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-card *ngFor="let item of listDataJanji">
+    <img src="{{item.image}}">
+
+    <ion-card-content>
+      <ion-card-title>
+        <strong>Detail Apoitment</strong>
+      </ion-card-title>
+      
+      <p><strong>Name:</strong> {{item.nama}}</p>
+      <p><strong>Poli:</strong> {{item.poli}}</p>
+      <p><strong>No Telp:</strong> {{item.phone}}</p>
+      <p><strong>Tanggal:</strong> {{item.tanggal}}</p>
+      <p><strong>Keluhan:</strong> {{item.keluhan}}</p>
+
+      <ion-item *ngFor="let items of listDataUser">
+        <ion-label>Ubah Status </ion-label>
+        <ion-select [(ngModel)]="kategoriStatus2" (ionChange)="updateApoitment(items.id,item)">
+          <ion-option value="1">Diajukan</ion-option>
+          <ion-option value="3">Dicancel</ion-option>
+          <ion-option value="4">Dilaksanakan</ion-option>
+        </ion-select>
+      </ion-item>
+
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-navbar>
+    <ion-toolbar color="primary">
+      <ion-title>Home</ion-title>
+    </ion-toolbar>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-slides autoplay="2000" loop="true" speed="1500">
+      <ion-slide>
+        <img src="assets/imgs/hospital1.jpg" alt="RS Awal Bros 1" style="width:400px;height:257px;">
+      </ion-slide>
+      <ion-slide>
+        <img src="assets/imgs/hospital2.jpg" alt="RS Awal Bros 2" style="width:400px;height:257px;">
+      </ion-slide>
+      <ion-slide>
+        <img src="assets/imgs/hospital3.jpg" alt="RS Awal Bros 3" style="width:400px;height:257px;">
+      </ion-slide>
+    </ion-slides>
+  </ion-card>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col (click)="colom1()">
+        <img src="assets/imgs/doctor.jpg" alt="Gambar Dokter" style="width:200px;height:150px;">
+      </ion-col>
+
+      <ion-col (click)="colom2()">
+        <img src="assets/imgs/teknologi.jpg" alt="Gambar Teknologi" style="width:200px;height:150px;">
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col (click)="colom3()">
+        <img src="assets/imgs/pharmacy.jpg" alt="Gambar Farmasi" style="width:200px;height:150px;">
+      </ion-col>
+
+      <ion-col (click)="colom4()">
+        <img src="assets/imgs/article.jpg" alt="Gambar Artikel" style="width:200px;height:150px;">
+      </ion-col>
+    </ion-row>   
+      
+  </ion-grid>
+</ion-content>

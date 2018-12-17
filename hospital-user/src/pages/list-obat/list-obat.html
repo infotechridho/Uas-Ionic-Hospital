@@ -1,0 +1,42 @@
+<!--
+  Generated template for the ListObatPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>{{items}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+  
+  
+  <ion-content padding>
+    <ion-list *ngFor="let item of dokterlist">
+      
+      <ion-item-sliding>
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="{{item.image}}">
+        </ion-avatar>
+        <p><strong>Nama :</strong> {{item.nama}}</p>
+        <p><strong>Harga :</strong> {{item.harga}}</p>
+        <p><strong>Golongan :</strong> {{item.golongan}}</p>
+        <p><strong>Kemasan :</strong> {{item.kemasan}}</p>
+      </ion-item>
+  
+      <ion-item-options>
+      <button ion-button color="light" icon-start (click)="more(item)">
+        <ion-icon name="ios-more"></ion-icon>
+        More
+      </button>
+      <button ion-button color="primary" icon-start (click)="buy(item)">
+        <ion-icon name="cart"></ion-icon>
+        Buy
+      </button>
+      </ion-item-options>
+      </ion-item-sliding>
+      
+    </ion-list>
+  </ion-content>

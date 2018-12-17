@@ -1,0 +1,37 @@
+<!--
+  Generated template for the DetailDokterPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Detail Dokter</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card>
+        <ion-avatar item-start>
+          <img src="{{items.image}}">
+        </ion-avatar>
+        <ion-card-content>
+          <p><strong>Nama :</strong> {{items.nama}}</p>
+          <p><strong>Poli :</strong> {{items.poli}}</p>
+          <p><strong>Gender :</strong> {{items.jk}}</p>
+          <p><strong>Phone :</strong> {{items.phone}}</p>
+      </ion-card-content>
+      <ion-card-content>
+        <P style="text-align:center;"><strong>Schedule :</strong></P>
+        <p><strong>Hari Senin :</strong> {{items.senin}}</p>
+        <p><strong>Hari Selasa :</strong> {{items.selasa}}</p>
+        <p><strong>Hari Rabu :</strong> {{items.rabu}}</p>
+        <p><strong>Hari Kamis :</strong> {{items.kamis}}</p>
+        <p><strong>Hari Jum'at :</strong> {{items.jumat}}</p>
+        <p><strong>Hari Sabtu :</strong> {{items.sabtu}}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

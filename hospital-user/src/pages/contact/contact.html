@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Contact
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-list *ngFor="let item of temp">
+      <ion-item>
+        <ion-label stacked>Nama</ion-label>
+        <ion-input type="text" value="" [(ngModel)]="nama"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+          <ion-label stacked>Alamat Email</ion-label>
+          <ion-input type="text" value="{{item.email}}" [(ngModel)]="email"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>No Telp</ion-label>
+        <ion-input type="text" value="{{item.telp}}" [(ngModel)]="telp"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Pesan</ion-label>
+        <ion-textarea rows="6" value="{{item.alamat}}" [(ngModel)]="alamat"></ion-textarea>
+      </ion-item>
+      </ion-list>
+      <button ion-button color="primary" (click)="kirim()">Kirim</button>
+</ion-content>
